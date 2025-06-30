@@ -23,16 +23,9 @@ public class DBConection {
 
     public void bukaKoneksi() {
         boolean flag = false;
-        try {
-        //langkah ke-2
-            Class.forName(NAMA_DRIVER);
-            flag = true;
-        } catch (ClassNotFoundException ex) {
-            System.out.println(ex.getMessage());
-        }
+        flag = true;
         if (flag) {
             try {
-        //langkah ke-3
                 conn = DriverManager.getConnection(NAMA_DB, USERNAME, PASSWORD);
             } catch (SQLException ex) {
                 System.out.println(ex.getMessage());
